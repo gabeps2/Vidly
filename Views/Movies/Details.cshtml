@@ -1,0 +1,18 @@
+﻿@model Vidly2.Models.Movie
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+@if (Model.id < 0)
+{
+    <h3>Sorry, this movies is not in the catalog.</h3>
+}
+else
+{
+    <h3>@Model.name</h3>
+}
+
+

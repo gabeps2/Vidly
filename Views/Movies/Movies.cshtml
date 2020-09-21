@@ -1,0 +1,23 @@
+﻿@model Vidly2.ViewModels.MoviesViewModel
+@{
+    ViewBag.Title = "MoviesView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+
+@if (Model.listMovies.Count < 1)
+{
+    <h3>Sorry, this catalog is empty.</h3>
+}
+else
+{
+    <table class="table table-bordered table-rover">
+        @foreach (var movie in Model.listMovies)
+        {
+            <tr>
+                <td> <a href="/Movies/Details/@movie.id">@movie.name</a> </td>
+            </tr>
+        }
+    </table>
+}
