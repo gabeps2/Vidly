@@ -5,33 +5,40 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly2.Models;
 using Vidly2.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly2.Controllers
 {
     public class CustomersController : Controller
     {
-        public List<Customer> customersList = new List<Customer>
-        {
-            new Customer() { name="John Smith", id=1 },
-            new Customer() {name="Mary Williams", id = 2},
-        };
+        private ApplicationDbContext _context;
 
+        public CustomersController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
 
         // GET: Customers
         [Route("Customers")]
         public ActionResult Customers()
         {
-            var viewModel = new CustomersViewModel()
-            {
-                customerList = this.customersList,
-            };
-            return View(viewModel);
+
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            return View(new CustomersViewModel(customers));
         }
 
         // GET: Customers/Details/5
         [Route("Customers/Details/{id}")]
         public ActionResult Details(int id)
         {
+
+            var customersList = _context.Customers.ToList();
+
             foreach (var customer in customersList)
             {
                 if (customer.id == id)
@@ -41,6 +48,23 @@ namespace Vidly2.Controllers
             }
             return View(new Customer() { id = -1 });
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // GET: Customers/Create
         public ActionResult Create()

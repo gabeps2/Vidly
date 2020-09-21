@@ -6,17 +6,26 @@
 
 <h2>Customers</h2>
 
-@if (Model.customerList.Count < 1)
+@if (Model.getList().Count<1)
 {
     <h3>Sorry, this list is empty.</h3>
 }
 else
 {
     <table class="table table-bordered table-rover">
-        @foreach (var customer in Model.customerList)
+
+        <thead>
+            <tr>
+                <th>Costumer</th>
+                <th>Discount Rate</th>
+            </tr>
+        </thead>
+
+        @foreach (var customer in Model.getList())
         {
             <tr>
                 <td> <a href="/Customers/Details/@customer.id">@customer.name</a> </td>
+                <td>@customer.MembershipType.DiscountRate%</td>
             </tr>
         }
     </table>

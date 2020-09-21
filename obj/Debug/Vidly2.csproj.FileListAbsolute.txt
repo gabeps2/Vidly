@@ -253,3 +253,7 @@ C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly2\Vidly2\obj\Debug\Vidl
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly2\Vidly2\obj\Debug\Vidly2.dll
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly2\Vidly2\obj\Debug\Vidly2.pdb
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.InitialModel1.resources
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddIsSubscribedToCustomer.resources
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddMembershipType.resources
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.PopulateMembershipTypes.resources
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.ApplyAnnotationsToCustomerName.resources
