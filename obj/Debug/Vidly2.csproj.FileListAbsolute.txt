@@ -395,3 +395,5 @@ C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migra
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.AddBirthdateIntoCustomer.resources
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.AddBirthdateIntoCustomer1.resources
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.UpdateBirthdateIntoCustomer.resources
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.AddDetailsIntoMovies.resources
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.PopulateMovies.resources

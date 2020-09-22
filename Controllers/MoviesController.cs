@@ -11,10 +11,10 @@ namespace Vidly2.Controllers
     public class MoviesController : Controller
     {
 
-        private List<Movie> moviesList = new List<Movie>
+        private List<Movies> moviesList = new List<Movies>
         {
-            new Movie(){name="Shrek!",id=1},
-            new Movie(){name="Wall-e",id=2}
+            new Movies(){name="Shrek!",id=1},
+            new Movies(){name="Wall-e",id=2}
         };
         // GET: Movies
         [Route("Movies")]
@@ -38,7 +38,7 @@ namespace Vidly2.Controllers
                     return View(movie);
                 }
             }
-            return View(new Movie() { id = -1 });
+            return View(new Movies() { id = -1 });
         }
 
         // GET: Movies/Create

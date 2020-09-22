@@ -8,6 +8,6 @@ namespace Vidly2.ViewModels
 {
     public class MoviesViewModel
     {
-        public List<Movie> listMovies;
+        public List<Movies> listMovies;
     }
 }
