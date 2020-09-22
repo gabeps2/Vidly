@@ -15,6 +15,7 @@
 
         public override void Down()
         {
+            Sql("DELETE FROM MembershipTypes WHERE Id BETWEEN 1 AND 4");
         }
     }
 }

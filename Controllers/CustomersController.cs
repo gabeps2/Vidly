@@ -36,8 +36,7 @@ namespace Vidly2.Controllers
         [Route("Customers/Details/{id}")]
         public ActionResult Details(int id)
         {
-
-            var customersList = _context.Customers.ToList();
+            var customersList = _context.Customers.Include(c=>c.MembershipType).ToList();
 
             foreach (var customer in customersList)
             {
@@ -48,8 +47,6 @@ namespace Vidly2.Controllers
             }
             return View(new Customer() { id = -1 });
         }
-
-
 
 
 

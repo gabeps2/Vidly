@@ -12,5 +12,13 @@
 }
 else
 {
-    <h3>@Model.name</h3>
+    <h2>@Model.name</h2>
+    <ul>
+        <li>Membership Type: @Model.MembershipType.Name</li>
+        @if (Model.Birthdate != null)
+        {
+            <li><p>Birthdate: @Model.Birthdate</p></li>
+        }
+
+    </ul>
 }

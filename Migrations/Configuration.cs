@@ -14,6 +14,12 @@ namespace Vidly2.Migrations
 
         protected override void Seed(Vidly2.Models.ApplicationDbContext context)
         {
+
+            /*context.MembershipTypes.AddOrUpdate(c => c.Name, 
+                new Models.MembershipType 
+            {
+                Name= "PayToUse"
+            });*/
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
