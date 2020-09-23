@@ -24,7 +24,7 @@ else
         @foreach (var customer in Model.getList())
         {
             <tr>
-                <td> <a href="/Customers/Details/@customer.id">@customer.name</a> </td>
+                <td> @Html.ActionLink(customer.name,"Edit","Customers", new { id = customer.id}) </td>
                 <td>@customer.MembershipType.Name</td>
             </tr>
         }
