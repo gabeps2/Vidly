@@ -8,6 +8,16 @@ namespace Vidly2.ViewModels
 {
     public class MoviesViewModel
     {
-        public List<Movies> listMovies;
+        private List<Movies> listMovies;
+
+        public MoviesViewModel(List<Movies> listMovies)
+        {
+            this.listMovies = listMovies;
+        }
+
+        public List<Movies> getList()
+        {
+            return this.listMovies;
+        }
     }
 }

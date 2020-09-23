@@ -6,17 +6,25 @@
 
 <h2>Movies</h2>
 
-@if (Model.listMovies.Count < 1)
+
+@if (Model.getList().Count < 1)
 {
     <h3>Sorry, this catalog is empty.</h3>
 }
 else
 {
     <table class="table table-bordered table-rover">
-        @foreach (var movie in Model.listMovies)
+
+        <tr>
+            <td><strong>Movie</strong></td>
+            <td><strong>Genre</strong></td>
+        </tr>
+
+        @foreach (var movie in Model.getList())
         {
             <tr>
                 <td> <a href="/Movies/Details/@movie.id">@movie.name</a> </td>
+                <td> @movie.Genre</td>
             </tr>
         }
     </table>

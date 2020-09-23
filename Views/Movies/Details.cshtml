@@ -1,4 +1,4 @@
-﻿@model Vidly2.Models.Movie
+﻿@model Vidly2.Models.Movies
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -13,6 +13,12 @@
 else
 {
     <h3>@Model.name</h3>
+    <ul>
+        <li>Genre: @Model.Genre</li>
+        <li>Release Date: @Model.ReleaseDate</li>
+        <li>Date Added: @Model.DateAdded</li>
+        <li>Number in Stocke: @Model.NumberInStock</li>
+    </ul>
 }
 
 
