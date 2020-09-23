@@ -204,21 +204,13 @@
     <Compile Include="Migrations\202009221244481_InsertNameIntoMembershipType.designer.cs">
       <DependentUpon>202009221244481_InsertNameIntoMembershipType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202009221302150_UpdateNameIntoMembershipTypes.cs" />
-    <Compile Include="Migrations\202009221302150_UpdateNameIntoMembershipTypes.designer.cs">
-      <DependentUpon>202009221302150_UpdateNameIntoMembershipTypes.cs</DependentUpon>
+    <Compile Include="Migrations\202009221401097_UpdateNameIntoMembershipTypes.cs" />
+    <Compile Include="Migrations\202009221401097_UpdateNameIntoMembershipTypes.designer.cs">
+      <DependentUpon>202009221401097_UpdateNameIntoMembershipTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202009221401097_UpdateNameIntoMembershipTypes1.cs" />
-    <Compile Include="Migrations\202009221401097_UpdateNameIntoMembershipTypes1.designer.cs">
-      <DependentUpon>202009221401097_UpdateNameIntoMembershipTypes1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009221422514_AddBirthdateIntoCustomer.cs" />
-    <Compile Include="Migrations\202009221422514_AddBirthdateIntoCustomer.designer.cs">
-      <DependentUpon>202009221422514_AddBirthdateIntoCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009221553018_AddBirthdateIntoCustomer1.cs" />
-    <Compile Include="Migrations\202009221553018_AddBirthdateIntoCustomer1.designer.cs">
-      <DependentUpon>202009221553018_AddBirthdateIntoCustomer1.cs</DependentUpon>
+    <Compile Include="Migrations\202009221553018_AddBirthdateIntoCustomer.cs" />
+    <Compile Include="Migrations\202009221553018_AddBirthdateIntoCustomer.designer.cs">
+      <DependentUpon>202009221553018_AddBirthdateIntoCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202009221556130_UpdateBirthdateIntoCustomer.cs" />
     <Compile Include="Migrations\202009221556130_UpdateBirthdateIntoCustomer.designer.cs">
@@ -305,8 +297,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
-    <Content Include="Views\Customers\Customers.cshtml" />
-    <Content Include="Views\Movies\Movies.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
   </ItemGroup>
@@ -351,17 +343,11 @@
     <EmbeddedResource Include="Migrations\202009221244481_InsertNameIntoMembershipType.resx">
       <DependentUpon>202009221244481_InsertNameIntoMembershipType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009221302150_UpdateNameIntoMembershipTypes.resx">
-      <DependentUpon>202009221302150_UpdateNameIntoMembershipTypes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009221401097_UpdateNameIntoMembershipTypes.resx">
+      <DependentUpon>202009221401097_UpdateNameIntoMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009221401097_UpdateNameIntoMembershipTypes1.resx">
-      <DependentUpon>202009221401097_UpdateNameIntoMembershipTypes1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009221422514_AddBirthdateIntoCustomer.resx">
-      <DependentUpon>202009221422514_AddBirthdateIntoCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009221553018_AddBirthdateIntoCustomer1.resx">
-      <DependentUpon>202009221553018_AddBirthdateIntoCustomer1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009221553018_AddBirthdateIntoCustomer.resx">
+      <DependentUpon>202009221553018_AddBirthdateIntoCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009221556130_UpdateBirthdateIntoCustomer.resx">
       <DependentUpon>202009221556130_UpdateBirthdateIntoCustomer.cs</DependentUpon>

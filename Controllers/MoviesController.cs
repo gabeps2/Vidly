@@ -18,7 +18,7 @@ namespace Vidly2.Controllers
         };
         // GET: Movies
         [Route("Movies")]
-        public ActionResult Movies()
+        public ActionResult Index()
         {
             var viewModel = new MoviesViewModel()
             {
