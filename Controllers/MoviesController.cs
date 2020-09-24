@@ -94,7 +94,7 @@ namespace Vidly2.Controllers
                 movieInDb.DateAdded = movie.DateAdded;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.NumberInStock = movie.NumberInStock;
-
+               
             }
             try
             {

@@ -10,10 +10,11 @@
 @if (Model.getList().Count < 1)
 {
     <h3>Sorry, this catalog is empty.</h3>
+    @Html.ActionLink("New Movie", "New", new { @class = "btn btn-primary" })
 }
 else
 {
-    @Html.ActionLink("New Movie", "New", new {@class = "btn btn-primary"})
+    @Html.ActionLink("New Movie", "New", new { @class = "btn btn-primary" })
 
     <table class="table table-bordered table-rover">
 
@@ -23,11 +24,11 @@ else
         </tr>
 
         @foreach (var movie in Model.getList())
-                {
-        <tr>
-            <td> <a href="/Movies/Edit/@movie.id">@movie.name</a> </td>
-            <td> @movie.Genre</td>
-        </tr>
-                }
+        {
+            <tr>
+                <td> <a href="/Movies/Edit/@movie.id">@movie.name</a> </td>
+                <td> @movie.Genre</td>
+            </tr>
+        }
     </table>
 }
