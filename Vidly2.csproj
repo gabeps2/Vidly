@@ -224,9 +224,13 @@
     <Compile Include="Migrations\202009221725421_PopulateMovies.designer.cs">
       <DependentUpon>202009221725421_PopulateMovies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202009231411325_BugFixMembershipType.cs" />
-    <Compile Include="Migrations\202009231411325_BugFixMembershipType.designer.cs">
-      <DependentUpon>202009231411325_BugFixMembershipType.cs</DependentUpon>
+    <Compile Include="Migrations\202009241708527_ChangeTypeBirthdate.cs" />
+    <Compile Include="Migrations\202009241708527_ChangeTypeBirthdate.designer.cs">
+      <DependentUpon>202009241708527_ChangeTypeBirthdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241734020_UpdateRequiredBirthdate.cs" />
+    <Compile Include="Migrations\202009241734020_UpdateRequiredBirthdate.designer.cs">
+      <DependentUpon>202009241734020_UpdateRequiredBirthdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -369,8 +373,11 @@
     <EmbeddedResource Include="Migrations\202009221725421_PopulateMovies.resx">
       <DependentUpon>202009221725421_PopulateMovies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009231411325_BugFixMembershipType.resx">
-      <DependentUpon>202009231411325_BugFixMembershipType.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009241708527_ChangeTypeBirthdate.resx">
+      <DependentUpon>202009241708527_ChangeTypeBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241734020_UpdateRequiredBirthdate.resx">
+      <DependentUpon>202009241734020_UpdateRequiredBirthdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
