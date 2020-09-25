@@ -14,10 +14,13 @@ namespace Vidly2.Models
         [Required(ErrorMessage = "The Name field is required")]
         [Display(Name = "Name")]
         public string name { get; set; }
-        [StringLength(255)]
-        [Required(ErrorMessage = "The Genre field is required")]
+
         [Display(Name = "Genre")]
-        public string Genre { get; set; }
+        public Genre Genre { get; set; }
+
+        [Required(ErrorMessage = "The Genre field is required")]
+        public byte GenreId { get; set; }
+
         [Required(ErrorMessage = "The Release Date field is required")]
         [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
@@ -25,7 +28,7 @@ namespace Vidly2.Models
         [Display(Name = "Date Added")]
         public DateTime DateAdded { get; set; }
         [Required(ErrorMessage = "The Number in Stock field is required")]
-        [Range(1,20)]
+        [Range(1, 20)]
         [Display(Name = "Number in Stock")]
         public int NumberInStock { get; set; }
     }

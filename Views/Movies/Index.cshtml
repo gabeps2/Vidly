@@ -7,7 +7,7 @@
 <h2>Movies</h2>
 
 
-@if (Model.getList().Count < 1)
+@if (Model.Movies.Count < 1)
 {
     <h3>Sorry, this catalog is empty.</h3>
     @Html.ActionLink("New Movie", "New", new { @class = "btn btn-primary" })
@@ -23,11 +23,19 @@ else
             <td><strong>Genre</strong></td>
         </tr>
 
-        @foreach (var movie in Model.getList())
+        @foreach (var movie in Model.Movies)
         {
             <tr>
                 <td> <a href="/Movies/Edit/@movie.id">@movie.name</a> </td>
-                <td> @movie.Genre</td>
+                @foreach (var genre in Model.Genres)
+                {
+                    if (genre.Id == movie.GenreId)
+                    {
+                        <td>
+                            @genre.Name
+                        </td>
+                    }
+                }
             </tr>
         }
     </table>

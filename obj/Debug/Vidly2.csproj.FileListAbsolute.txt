@@ -537,3 +537,4 @@ C:\Users\Gabriel Jabil\Documents\The Complete ASP.NET MVC\Vidly\Vidly\obj\Debug\
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.ChangeTypeBirthdate.resources
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.RequiredOnAtributesMovie.resources
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.AddRangeNumberInStock.resources
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.AddGenreModel.resources

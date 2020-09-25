@@ -25,11 +25,11 @@ namespace Vidly2.Controllers
 
         public ActionResult New()
         {
-            var movies = _context.Movies.ToList();
+            var genres = _context.Genres.ToList();
             var movie = new Movies();
             var viewModel = new MoviesFormViewModel
             {
-                Movies = movies,
+                Genres = genres,
                 Movie = movie,
             };
 
@@ -38,7 +38,7 @@ namespace Vidly2.Controllers
 
         public ActionResult Edit(int id)
         {
-            var movies = _context.Movies.ToList();
+            var genres = _context.Genres.ToList();
 
             foreach (var movie in _context.Movies.ToList())
             {
@@ -47,7 +47,7 @@ namespace Vidly2.Controllers
                     var viewModel1 = new MoviesFormViewModel
                     {
                         Movie = movie,
-                        Movies = movies,
+                        Genres = genres,
                     };
                     return View("MovieForm", viewModel1);
                 }
@@ -55,7 +55,7 @@ namespace Vidly2.Controllers
             }
             var viewModel = new MoviesFormViewModel
             {
-                Movies = movies,
+                Genres = genres,
             };
             return View("MovieForm", viewModel);
         }
@@ -65,7 +65,8 @@ namespace Vidly2.Controllers
         public ActionResult Index()
         {
             var movies = _context.Movies.ToList();
-            return View(new MoviesViewModel(movies));
+            var genres = _context.Genres.ToList();
+            return View(new MoviesViewModel { Genres = genres, Movies = movies});
         }
         // GET: Movies/Details/5
         [Route("Movies/Details/{id}")]
@@ -91,7 +92,7 @@ namespace Vidly2.Controllers
                 var viewModel = new MoviesFormViewModel
                 {
                     Movie = movie,
-                    Movies = _context.Movies.ToList(),
+                    Genres = _context.Genres.ToList(),
                 };
                 return View("MovieForm", viewModel);
             }
@@ -104,7 +105,7 @@ namespace Vidly2.Controllers
             {
                 var movieInDb = _context.Movies.Single(c => c.id == movie.id);
                 movieInDb.name = movie.name;
-                movieInDb.Genre = movie.Genre;
+                movieInDb.GenreId = movie.GenreId;
                 movieInDb.DateAdded = movie.DateAdded;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.NumberInStock = movie.NumberInStock;
