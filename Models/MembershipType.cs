@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Profile;
 
 namespace Vidly2.Models
 {
@@ -15,5 +16,9 @@ namespace Vidly2.Models
         public short SignUpFee { get; set; }
         public byte DurationInMonths { get; set; }
         public byte DiscountRate { get; set; }
+
+        public static readonly byte Unknown = 0;
+        public static readonly byte PayAsTouGo = 1;
+
     }
 }
