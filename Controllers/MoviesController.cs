@@ -26,9 +26,11 @@ namespace Vidly2.Controllers
         public ActionResult New()
         {
             var movies = _context.Movies.ToList();
+            var movie = new Movies();
             var viewModel = new MoviesFormViewModel
             {
                 Movies = movies,
+                Movie = movie,
             };
 
             return View("MovieForm", viewModel);
@@ -80,8 +82,20 @@ namespace Vidly2.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movies movie)
         {
+
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MoviesFormViewModel
+                {
+                    Movie = movie,
+                    Movies = _context.Movies.ToList(),
+                };
+                return View("MovieForm", viewModel);
+            }
+
             if (movie.id == 0)
             {
                 _context.Movies.Add(movie);
@@ -94,13 +108,13 @@ namespace Vidly2.Controllers
                 movieInDb.DateAdded = movie.DateAdded;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.NumberInStock = movie.NumberInStock;
-               
+
             }
             try
             {
                 _context.SaveChanges();
             }
-            catch(DbEntityValidationException e)
+            catch (DbEntityValidationException e)
             {
                 Console.WriteLine(e);
             }
