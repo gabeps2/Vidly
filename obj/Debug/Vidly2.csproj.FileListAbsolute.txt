@@ -838,3 +838,4 @@ C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\bin\AutoMapper.xml
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\bin\System.Net.Http.Formatting.xml
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\bin\System.Web.Http.xml
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\bin\System.Web.Http.WebHost.xml
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.UpdateForeignKeyGenre.resources

@@ -190,6 +190,8 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
+    <Compile Include="Dtos\GenreDto.cs" />
+    <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MoviesDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -257,6 +259,10 @@
     <Compile Include="Migrations\202009251340268_AddGenreModel.cs" />
     <Compile Include="Migrations\202009251340268_AddGenreModel.designer.cs">
       <DependentUpon>202009251340268_AddGenreModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009291321479_UpdateForeignKeyGenre.cs" />
+    <Compile Include="Migrations\202009291321479_UpdateForeignKeyGenre.designer.cs">
+      <DependentUpon>202009291321479_UpdateForeignKeyGenre.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -649,6 +655,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009251340268_AddGenreModel.resx">
       <DependentUpon>202009251340268_AddGenreModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009291321479_UpdateForeignKeyGenre.resx">
+      <DependentUpon>202009291321479_UpdateForeignKeyGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

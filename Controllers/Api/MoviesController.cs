@@ -27,7 +27,9 @@ namespace Vidly2.Controllers.Api
         //GET /api/movies
         public IEnumerable<MoviesDto> GetMovies()
         {
-            return _context.Movies.ToList().Select(Mapper.Map<Movies, MoviesDto>);
+            return _context.Movies.Include(c => c.Genre)
+                .ToList()
+                .Select(Mapper.Map<Movies, MoviesDto>);
         }
 
         //GET /api/movies/1
