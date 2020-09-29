@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
@@ -23,6 +24,7 @@ namespace Vidly2.Controllers
             _context.Dispose();
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
@@ -34,6 +36,7 @@ namespace Vidly2.Controllers
             return View("MovieForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(c => c.id == id);
@@ -56,13 +59,15 @@ namespace Vidly2.Controllers
 
         // GET: Movies
         [Route("Movies")]
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            var movies = _context.Movies.ToList();
-            var genres = _context.Genres.ToList();
-            return View(new MoviesViewModel { Genres = genres, Movies = movies });
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+            return View("ReadOnlyList");
         }
+
         // GET: Movies/Details/5
+        [Authorize(Roles = RoleName.CanManageMovies)]
         [Route("Movies/Details/{id}")]
         public ActionResult Details(int id)
         {
@@ -78,6 +83,7 @@ namespace Vidly2.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Movies movie)
         {
 
