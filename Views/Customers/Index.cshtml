@@ -6,34 +6,16 @@
 
 <h2>Customers</h2>
 
-@if (Model.getList().Count<1)
-{
-    <h3>Sorry, this list is empty.</h3>
-}
-else
-{
-    <table id ="customers" class="table table-bordered table-rover">
+<table id="customers" class="table table-bordered table-rover">
 
-        <thead>
-            <tr>
-                <th>Costumer</th>
-                <th>Discount Rate</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-
-        @foreach (var customer in Model.getList())
-        {
-            <tr>
-                <td> @Html.ActionLink(customer.name,"Edit","Customers", new { id = customer.id}, null) </td>
-                <td>@customer.MembershipType.Name</td>
-                <td>
-                    <button data-customer-id="@customer.id" class="btn-link js-delete">Delete</button>
-                </td>
-            </tr>
-        }
-    </table>
-}
+    <thead>
+        <tr>
+            <th>Costumer</th>
+            <th>Discount Rate</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+</table>
 
 @section scripts
 {
@@ -44,9 +26,24 @@ else
                 ajax: {
                     url: "/api/customers",
                     dataSrc: ""
-
-                }
-                    
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function (data, type, customer) {
+                            return "<a href='/customers/edit" + customer.id + "'>" + customer.name + "</a>";
+                        }
+                    },
+                    {
+                        data: "name"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class = 'btn-link js-delete' data-customer-id" + data + ">Delete</button>";
+                        }
+                    },
+                ]
             });
 
             $("#customers").on("click", "js-delete", function () {
@@ -69,5 +66,5 @@ else
 
         });
     </script>
-        
+
 }
