@@ -841,3 +841,10 @@ C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\bin\System.Web.Http.We
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.UpdateForeignKeyGenre.resources
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.SeedUsers.resources
 C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.AddDrivingLicenceToApplicationUser.resources
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\bin\Glimpse.Ado.dll
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\bin\Glimpse.AspNet.dll
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\bin\Glimpse.Core.dll
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\bin\Glimpse.EF6.dll
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\bin\Glimpse.Mvc5.dll
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.AddRentals.resources
+C:\Users\2856737\Documents\The Complete ASP.NET MVC\Vidly\obj\Debug\Vidly2.Migrations.AddNumberAvailableToMovies.resources

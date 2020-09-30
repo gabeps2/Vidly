@@ -17,11 +17,13 @@ namespace Vidly2.App_Start
             Mapper.CreateMap<Movies, MoviesDto>();
             Mapper.CreateMap<MembershipType, MembershipTypeDto>();
             Mapper.CreateMap<Genre, GenreDto>();
+            Mapper.CreateMap<Rental, NewRentalsDto>();
 
 
             //Dto to Domain
             Mapper.CreateMap<CustomerDto, Customer>();
             Mapper.CreateMap<MoviesDto, Movies>();
+            Mapper.CreateMap<NewRentalsDto, Rental>();
 
 
             // Mapper.CreateMap<Customer, CustomerDto>().ForMember(m => m.id, opt => opt.Ignore());

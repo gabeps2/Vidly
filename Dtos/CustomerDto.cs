@@ -11,7 +11,7 @@ namespace Vidly2.Dtos
     {
         public int id { get; set; }
 
-        [Required(ErrorMessage = "Please enter customer's name.")]
+        [Required]
         [StringLength(255)]
         public string name { get; set; }
 
