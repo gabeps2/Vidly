@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Data.Entity.Validation;
 using System.Linq;
-using System.Web;
+using Vidly2.Models.IdentityModels;
 using System.Web.Mvc;
 using Vidly2.Models;
 using Vidly2.ViewModels;

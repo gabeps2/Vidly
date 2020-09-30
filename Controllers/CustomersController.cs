@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly2.Models;
+using Vidly2.Models.IdentityModels;
 using Vidly2.ViewModels;
 using System.Data.Entity;
 using System.Web.Configuration;

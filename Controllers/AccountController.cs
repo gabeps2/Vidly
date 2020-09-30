@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Vidly2.Models;
+using Vidly2.Models.IdentityModels;
 
 namespace Vidly2.Controllers
 {
@@ -135,7 +136,6 @@ namespace Vidly2.Controllers
             }
         }
 
-        //
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
@@ -143,7 +143,6 @@ namespace Vidly2.Controllers
             return View();
         }
 
-        //
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
@@ -157,6 +156,7 @@ namespace Vidly2.Controllers
                     UserName = model.Email,
                     Email = model.Email,
                     DrivingLicense = model.DrivingLicense,
+                    PhoneNumber = model.Phone,
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -384,6 +384,7 @@ namespace Vidly2.Controllers
                     UserName = model.Email,
                     Email = model.Email,
                     DrivingLicense = model.DrivingLicense,
+                    PhoneNumber = model.Phone,
                 };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)

@@ -5,7 +5,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using Vidly2.Models;
+using Vidly2.Models.IdentityModels;
 
 namespace Vidly2
 {

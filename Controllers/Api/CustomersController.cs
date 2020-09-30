@@ -3,12 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Runtime.Remoting.Messaging;
 using System.Web.Http;
 using Vidly2.Dtos;
 using Vidly2.Models;
 using System.Data.Entity;
+using Vidly2.Models.IdentityModels;
 
 namespace Vidly2.Controllers.Api
 {

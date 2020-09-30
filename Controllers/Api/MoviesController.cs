@@ -1,17 +1,14 @@
 ﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Validation;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.UI.WebControls;
 using Vidly2.Dtos;
 using Vidly2.Models;
-using Vidly2.ViewModels;
+using Vidly2.Models.IdentityModels;
+
 
 namespace Vidly2.Controllers.Api
 {
