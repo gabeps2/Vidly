@@ -22,7 +22,7 @@ namespace Vidly2.Controllers.Api
         }
 
         //GET /api/movies
-        public IHttpActionResult GetMovies(string query = null)
+        public IEnumerable<MoviesDto> GetMovies(string query = null)
         {
             var moviesQuery = _context.Movies.Include(c => c.Genre);
 
@@ -33,7 +33,7 @@ namespace Vidly2.Controllers.Api
 
             var moviesDtos = moviesAvailable.ToList().Select(Mapper.Map<Movies, MoviesDto>);
 
-            return Ok(moviesDtos);
+            return moviesDtos;
         }
 
         //GET /api/movies/1

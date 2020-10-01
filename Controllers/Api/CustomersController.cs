@@ -21,7 +21,7 @@ namespace Vidly2.Controllers.Api
         }
 
         //GET /api/customers
-        public IHttpActionResult GetCustomers(string query = null)
+        public IEnumerable<CustomerDto> GetCustomers(string query = null)
         {
             var customersQuery = _context.Customers.Include(c => c.MembershipType);
 
@@ -30,7 +30,7 @@ namespace Vidly2.Controllers.Api
 
             var customerDtos = customersQuery.ToList().Select(Mapper.Map<Customer, CustomerDto>);
 
-            return Ok(customerDtos);
+            return customerDtos;
         }
 
         //GET /api/customers/1
