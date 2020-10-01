@@ -25,10 +25,10 @@ namespace Vidly2
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/content/bootstrap.css",
                       "~/content/datatables/css/datatables.bootstrap.css",
-                      "~/Content/typeahead.css",
-                      "~/Content/site.css"));
+                      "~/content/typeahead.css",
+                      "~/content/site.css"));
         }
     }
 }
